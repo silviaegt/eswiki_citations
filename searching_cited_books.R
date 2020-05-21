@@ -1,9 +1,3 @@
-getwd()
-# set working directory
-#C:\Users\segutierrez\Dropbox\eswiki
-setwd("/Users/segutierrez/Dropbox/eswiki")
-
-
 eswiki <- read.table(file = 'eswiki.tsv', sep = '\t', header = TRUE, fill=TRUE, encoding = "UTF-8")
 head(eswiki)
 summary(eswiki)
@@ -59,4 +53,3 @@ write.csv(clinksdf, file = "colmexlinks.csv", row.names=FALSE)
 freqarticles <- sort(table(clinksdf$articulo_wikipedia),decreasing=T)
 View(freqarticles)
 domain.info <- tldextract(parse_url(colmexlinks$copia_links[1]))
-
